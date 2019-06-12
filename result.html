@@ -1,0 +1,106 @@
+<!DOCTYPE html>
+
+<head>
+   <meta name="viewport" content="width=device-width, initial-scale=1">
+   <title>
+      DPRS Result
+   </title>
+   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/bulma/0.7.4/css/bulma.min.css">
+   <script defer src="https://use.fontawesome.com/releases/v5.3.1/js/all.js"></script>
+   <style>
+      .hero {
+         background-image: url("static/dominik-lange-1183371-unsplash.jpg");
+         /* The image used */
+         background-color: #0e0d0d;
+         /* Used if the image is unavailable */
+         height: 1000px;
+         /* You must set a specified height */
+         background-position: center;
+         /* Center the image */
+         background-repeat: no-repeat;
+         /* Do not repeat the image */
+         background-size: cover;
+         /* Resize the background image to cover the entire container */
+      }
+
+      .card-footer {
+
+         border: none;
+      }
+
+      .card-footer-item.register {
+         background-color: #284863;
+         color: white;
+      }
+
+      .center {
+         position: absolute;
+         top: 50%;
+         left: 50%;
+         transform: translate(-50%, -50%);
+      }
+   </style>
+</head>
+
+<body>
+   <section class="hero is-fullheight ">
+      <div class="hero-body" style="position: relative;">
+         <div class="card center " style="min-width:250px;">
+            <div class="card-content">
+               <p class="title">
+                  DPRS RESULT
+               </p>
+               
+               {% if(test_output==1)%}
+                  
+                              <div class="field">
+                                 <p>You are diagnosed with diabetes!</p>
+                                 </div>
+                  
+                  {% endif %}
+               {% if(test_output==0) %}
+                     <div class="field">
+                           <p>You are not diagnosed with diabetes!</p>
+                           </div>
+                  {% endif %}
+               {% if(age>45)%}
+                  
+                              <div class="field">
+                                 <p>Being more than 45 years of age is a risk factor for diabetes. People of this age and older should take active steps to prevent the condition including regular, light to moderate exercise and a controlled diet.</p>
+                                 </div>
+                  
+                  {% endif %}
+               {% if(bmi>30)%}
+                  
+                              <div class="field">
+                                 <p>Ways to lower your bmi of {%print(bmi)%}:</p>
+                                 <p>1.Exercise: Regular physical activity burns calories and builds muscle-both of which help you look and feel good and keep weight off</p>
+                                 <p>2.Reduce screen time</p> 
+                                 <p>3.Watch out for portion distortion</p> 
+                                 <p>4.Eat 5 serving of fruits and veggies a day</p> 
+                                 <p>5.Don’t skip breakfast</p>
+                                 </div>
+                  
+                  {% endif %}
+               {% if(glucose>126)%}
+                  
+                              <div class="field">
+                                 <p>Ways to lower your glucose level of {%print(glucose)%}:</p>
+                                 <p>1.Exercise Regularly</p>
+                                 <p>2.control your carb intake</p>
+                                 <p>3.increase your fiber intake</p>
+                                 <p>4.Drink water and stay hydrated</p>
+                                 <p>5.Implement portion control</p>
+                                 <p>6.Choose foods with a low glycemic index</p>
+                                 <p>7.Control stress levels</p>
+                                 <p>8.Monitor your blood sugar Levels</p>
+                                 </div>
+                  
+                  {% endif %}
+            </div>
+         </div>
+      </div>
+   </section>
+</body>
+
+</html>
