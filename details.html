@@ -1,0 +1,145 @@
+<!DOCTYPE html>
+
+<head>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>
+        DPRS
+    </title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/bulma/0.7.4/css/bulma.min.css">
+    <script defer src="https://use.fontawesome.com/releases/v5.3.1/js/all.js"></script>
+
+
+
+
+    <style>
+        .hero {
+            background-image: url("static/dominik-lange-1183371-unsplash.jpg");
+            /* The image used */
+            background-color: #0e0d0d;
+            /* Used if the image is unavailable */
+            height: 1000px;
+            /* You must set a specified height */
+            background-position: center;
+            /* Center the image */
+            background-repeat: no-repeat;
+            /* Do not repeat the image */
+            background-size: cover;
+            /* Resize the background image to cover the entire container */
+        }
+
+        .card-footer {
+
+            border: none;
+        }
+
+        .card-footer-item.register {
+            background-color: #284863;
+            color: white;
+        }
+
+        .center {
+            position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+        }
+    </style>
+</head>
+
+<body>
+    <form action="getfile" method="POST">
+    <section class="hero is-fullheight ">
+        <div class="hero-body"style="position: relative;">
+            <div class="card center "style="min-width:250px;">
+                <div class="card-content">
+                    <p class="title">
+                        DPRS Form
+                    </p>
+                    <p class="subtitle">
+                        Provide details to continue.
+                    </p>
+                    <div class="field">
+                        <label class="label">Gender</label>
+                        <div class="control">
+                            <div class="select">
+                                <select name="gender">
+                                    <option disabled selected value> -- select an option -- </option>
+                                    <option value="male">Male</option>
+                                    <option value="female">Female</option>
+                                </select>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="field">
+                        <label class="label">Age</label>
+                        <div class="control">
+                            <input class="input" name="age" type="number" placeholder="Age">
+                        </div>
+                        <div class="field">
+                            <label class="label">Pregnancy Count</label>
+                            <div class="control">
+                                <input class="input" type="number" name="pregnancycount" placeholder="Pregnancy Count">
+                            </div>
+                    </div>
+                    <div class="field">
+                        <label class="label">Glucose</label>
+                        <div class="control">
+                            <input class="input" name="glucose" type="number" placeholder="Glucose">
+                        </div>
+                    </div>
+                    <div class="field">
+                        <label class="label">Blood Pressure</label>
+                        <div class="control">
+                            <input class="input" type="number" name="bloodpressure" placeholder="Blood Presure">
+                        </div>
+                    </div>
+                    <div class="field">
+                        <label class="label">Skin Thickness</label>
+                        <div class="control">
+                            <input class="input" name="skinthickness" type="number" placeholder="Skin Thickness">
+                        </div>
+                    </div>
+                    <div class="field">
+                        <label class="label">Insulin</label>
+                        <div class="control">
+                            <input class="input" name="insulin" type="number" placeholder="Insulin">
+                        </div>
+                    </div>
+                    <div class="field">
+                        <label class="label">BMI</label>
+                        <div class="control">
+                            <input class="input" name="bmi" type="text" placeholder="BMI">
+                        </div>
+                    </div>
+                    <div class="field">
+                        <label class="label">Diabetes Pedigree Function</label>
+                        <div class="control">
+                            <input class="input" name="diabetespedigreefunction" type="text"
+                                placeholder="Diabetes Pedigree Function">
+                        </div>
+                    </div>
+                    <footer class="card-footer">
+                        <button class="is-paddingless"type="submit" style="width:100%;">
+                            <p class="card-footer-item register">
+                                
+                           
+                                    <span>
+                                        Submit
+                                    </span>
+                                
+                                </p>
+                            </button>
+                    </footer>
+
+
+                </div>
+            </div>
+
+        </div>
+
+
+       
+    </section>
+
+</form>
+</body>
